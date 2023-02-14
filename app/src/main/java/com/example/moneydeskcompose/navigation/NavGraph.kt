@@ -4,8 +4,8 @@ import androidx.compose.runtime.Composable
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
-import com.example.moneydeskcompose.AddScreen
-import com.example.moneydeskcompose.MainScreen
+import com.example.moneydeskcompose.screens.AddScreen
+import com.example.moneydeskcompose.screens.MainScreen
 
 @Composable
 fun NavGraph() {

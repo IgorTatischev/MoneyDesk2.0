@@ -1,4 +1,4 @@
-package com.example.moneydeskcompose
+package com.example.moneydeskcompose.screens
 
 import androidx.compose.material.Text
 import androidx.compose.runtime.Composable

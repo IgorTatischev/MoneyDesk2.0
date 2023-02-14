@@ -1,21 +1,26 @@
 package com.example.moneydeskcompose
 
-import android.annotation.SuppressLint
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.compose.foundation.background
+import androidx.compose.foundation.layout.Arrangement
+import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxSize
-import androidx.compose.material.*
-import androidx.compose.runtime.Composable
+import androidx.compose.foundation.layout.padding
+import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Scaffold
+import androidx.compose.material.Text
+import androidx.compose.material.TopAppBar
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.example.moneydeskcompose.navigation.NavGraph
 import com.example.moneydeskcompose.ui.theme.MoneyDeskComposeTheme
 
 class MainActivity : ComponentActivity() {
-    @SuppressLint("UnusedMaterialScaffoldPaddingParameter")
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
@@ -23,33 +28,26 @@ class MainActivity : ComponentActivity() {
                 Scaffold(
                     topBar = {
                         TopAppBar(
-                            title = { Text(text = "dsfsdf")},
+                            title = { Text(text = "MoneyDesk")},
                             backgroundColor = Color.Blue,
                             contentColor = Color.White,
                             elevation = 12.dp
                         )
                     },
                     content = {
-//                      padding ->Column(modifier = Modifier.padding(padding)
-                        Surface (
-                            modifier = Modifier.fillMaxSize(),
-                            color = MaterialTheme.colors.background
-
+                        Column(
+                            modifier = Modifier
+                                .padding(it)
+                                .fillMaxSize()
+                                .background(MaterialTheme.colors.background),
+                            verticalArrangement = Arrangement.Center,
+                            horizontalAlignment = Alignment.CenterHorizontally
                         ){
                             NavGraph()
-                            //
                         }
                     }
                 )
             }
         }
-    }
-}
-
-@Preview(showBackground = true)
-@Composable
-fun DefaultPreview() {
-    MoneyDeskComposeTheme {
-        //TODO
     }
 }
